@@ -1,0 +1,52 @@
+# 基础数据清洗开始时间
+HUB_START_DATE : 20170101
+# 基础数据清洗结束时间（只针对第一次清洗历史数据有效）
+HUB_END_DATE: 20250321
+
+# 数据更新时间(每日) 
+UPDATE_TIME: '20:00'
+
+# 股票数据更新时间(每日)
+STOCKS_UPDATE_TIME: "20:00"
+# 因子数据更新时间(每日)
+FACTOR_UPDATE_TIME: "20:30"
+
+
+# 数据源
+DATASOURCE: tqsdk
+DATAHUBSOURCE: ""
+#米筐账号密码
+MUSER: ""
+MPASSWORD: ""
+# TUSHARE TOKEN
+TS_TOKEN: ""
+# 讯投  TOKEN
+XT_TOKEN: ''
+# 数据源验证信息
+USER: xxxxxx
+PASSWORD: xxxxxx
+
+
+# 数据库，注意：密码中包含特殊字符，在连接时会自动进行 URL 编码
+MONGO_USER: "panda"
+MONGO_PASSWORD: "panda"
+MONGO_URI: "127.0.0.1:27017"
+MONGO_AUTH_DB: "admin"
+MONGO_DB: "panda"
+# 数据库类型配置说明：
+# - "single": 单节点模式，适用于开发环境或小型应用
+# - "replica_set": 副本集模式，提供高可用性和数据冗余
+# - "sharded": 分片模式，用于大规模数据存储（待实现）
+MONGO_TYPE: "replica_set"
+MONGO_REPLICA_SET: "rs0"
+
+# OpenAI配置
+LLM_API_KEY: "这里填写你的KEY"
+LLM_MODEL: "deepseek-chat"
+LLM_BASE_URL: "https://api.deepseek.com/v1"
+
+
+# 日志配置
+LOG_LEVEL: "DEBUG"
+log_file: "logs/data_cleaner.log"
+log_rotation: "1 MB" 
